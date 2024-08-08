@@ -26,11 +26,29 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Project Improvement Idea
+Better approach to drop unnecessary words from the query, in case we don't want to match with every word.
+- Use [node-nlp](https://github.com/axa-group/nlp.js/tree/master)
+- Train with the initial data at the start of the app
+- Incrementally add data to the model when new rows are added to the tables
+- Use scores to determinate type of a word
+
 ## Installation
 
 ```bash
 $ pnpm install
 ```
+
+## Database Setup
+```bash
+$ cp .env.example .env
+```
+
+And set `DATABASE_URL` to database connection string.
+
+
+[NestJS Docs: Setting database connection using Prisma](https://docs.nestjs.com/recipes/prisma#set-the-database-connection)
+[Prisma Docs: Postgres connection url](https://www.prisma.io/docs/orm/overview/databases/postgresql#connection-url)
 
 ## Running the app
 
